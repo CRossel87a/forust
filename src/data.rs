@@ -88,6 +88,7 @@ impl FloatData<f32> for f32 {
 /// Contigious Column major matrix data container. This is
 /// used throughout the crate, to house both the user provided data
 /// as well as the binned data.
+#[derive(Debug, Clone)]
 pub struct Matrix<'a, T> {
     pub data: &'a [T],
     pub index: Vec<usize>,
